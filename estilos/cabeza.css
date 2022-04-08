@@ -1,0 +1,106 @@
+.cabeza{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(126, 22, 100);
+    box-shadow: 0 0 10px;
+    margin: 0 0 15px 0;
+}
+
+.logo{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.lm-logo{
+    width: 13%;
+    margin: 0 8px;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    margin: 0 15px 0 0;
+}
+
+.menu > a{
+    color: white;
+    text-align: center;
+    margin: 0 7px;
+}
+
+.modificador::before{
+    content: " ";
+    position: absolute;
+    top: 30px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid transparent;
+}
+
+.user{
+    color: white;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.user:hover{
+    color: rgb(180, 180, 180);
+}
+
+.user:active{
+    color: rgb(121, 121, 121);
+}
+
+.submenu{
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    padding: 15px;
+    width: 180px;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    left: -35px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px;
+}
+
+.menuVisible{
+    visibility: visible;
+}
+
+.submenu > h2 {
+    margin-bottom: 10px;
+}
+
+.submenu::before{
+    content: " ";
+    position: absolute;
+    top: -10px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid rgb(255, 255, 255);
+    border-left: 14px solid transparent;
+}
+
+.submenu > a{
+    color: black;
+}
+
+.submenu > a:hover{
+    color: rgb(88, 88, 88);
+}
+
+.submenu > a:active{
+    color: rgb(49, 49, 49);
+}
