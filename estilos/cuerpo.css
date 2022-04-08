@@ -4,7 +4,7 @@
     padding: 15px;
     width: 87%;
     margin: 25px auto;
-    height: 800px;
+    height: auto;
     background-color: rgba(114, 19, 90, 0.979);
     color: white;
 }
@@ -70,8 +70,8 @@ video{
 
 .imagen{
     background-color: black;
-    width: 190px;
-    max-width: 190px;
+    width: 160px;
+    max-width: 160px;
     height: 90px;
     max-height: 90px;
 }
