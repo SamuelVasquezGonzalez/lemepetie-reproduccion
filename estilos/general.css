@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200&family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Vazirmatn:wght@200&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
 :root{
     --botonColor: rgb(61, 61, 61);
     --botonHover: rgb(48, 48, 48);
     --botonActive: rgb(31, 31, 31);
 }
 
+
+h2,a,p{
+
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+h3{
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.vid{
+    color: rgb(184, 184, 184);
+    font-size: 14px;
+    font-style: italic;
+}
 
 *{
     margin: 0;

@@ -29,7 +29,7 @@
 .menu > a{
     color: white;
     text-align: center;
-    margin: 0 7px;
+    margin: 0 16px;
 }
 
 .modificador::before{
@@ -68,7 +68,7 @@
     background-color: white;
     position: absolute;
     top: 50px;
-    left: -35px;
+    left: 0px;
     border-radius: 12px;
     box-shadow: 0 0 10px;
 }
