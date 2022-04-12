@@ -14,6 +14,7 @@ h2,a,p{
 }
 
 h3{
+    text-align: left;
     font-family: Arial;
     font-size: 18px;
 }

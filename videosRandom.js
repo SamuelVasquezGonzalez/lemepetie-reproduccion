@@ -1,11 +1,28 @@
-let nombresVideos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"]
+//------------- POO ---------- //
+
+class videosPoo {
+    constructor(nombre, visitas, direccion){
+        this.nombre = nombre;
+        this.visitas = "Visitas: " + visitas;
+        this.direccion = direccion;
+        this.array = [nombre, visitas, direccion]
+    }
+}
+
+
+    
+
+let videoEjemplo1 = new videosPoo("Terraria Auto-pause ", 154.221, "multimedia/video1.mp4");
+let videoEjemplo2 = new videosPoo("Ska-p ", 100.000, "multimedia/video2.mp4");
+let videoEjemplo3 = new videosPoo("Bodies - Drowing Pool ", 644.326, "multimedia/video3.mp4");
+let videoEjemplo4 = new videosPoo("Persiana Americana - soda sterero ", 154.221, "multimedia/video4.mp4");
+
+
 
 // Contenedor
 let tarjetas = document.querySelector('.tarjetas')
 
-function crearVideos (){
-    let random = Math.round(Math.random()*(0, 3))
-    let visualizacionesRandom = Math.round(Math.random()*1000000)
+function crearVideos (videoVariable){
 
     let botonVideo = document.createElement('button');
     botonVideo.classList.add("botonVideo")
@@ -17,9 +34,7 @@ function crearVideos (){
     // Imagen
     let imagen = document.createElement('video');
     imagen.classList.add('imagen');
-    let archivo = "multimedia/";
-    let nombreFinal = nombresVideos[random];
-    imagen.src = archivo + nombreFinal
+    imagen.src = videoVariable.array[2]
 
     // Info
     let info = document.createElement("div");
@@ -27,12 +42,12 @@ function crearVideos (){
 
     let nombreVideo = document.createElement('h3');
     nombreVideo.classList.add('titulo');
-    nombreVideo.innerHTML = nombreFinal
+    nombreVideo.innerHTML = videoVariable.array[0]
 
     let visualizacionesVideo = document.createElement('p');
     visualizacionesVideo.classList.add('visualizaciones');
     visualizacionesVideo.classList.add('vid');
-    visualizacionesVideo.innerHTML = "Visitas: " + visualizacionesRandom;
+    visualizacionesVideo.innerHTML = videoVariable.array[1]
 
     info.appendChild(nombreVideo)
     info.appendChild(visualizacionesVideo)
@@ -42,19 +57,19 @@ function crearVideos (){
     tarjetas.appendChild(botonVideo)
 }
 
-crearVideos()
-crearVideos()
-crearVideos()
-crearVideos()
-crearVideos()
-crearVideos()
+crearVideos(videoEjemplo1)
+crearVideos(videoEjemplo2)
+crearVideos(videoEjemplo3)
+crearVideos(videoEjemplo4)
 
 
 document.querySelectorAll('.botonVideo').forEach(item => {
     item.addEventListener('click', e => {
+        console.log(e)
+        console.log(item)
         let contenido = document.querySelector(".contenido")
-        var index = e.target.src;
-        contenido.src = index;
+        var url = e.target.src;
+        contenido.src = url;
     })
 })
 
